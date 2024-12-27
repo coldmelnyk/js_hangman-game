@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/akzidenz/AkzidenzGroteskPro-BoldEx.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 500;
+    font-style: normal;
+    src: url('/fonts/akzidenz/AkzidenzGroteskPro-Md.otf') format('opentype');
+  }
+
+  @font-face {
+    font-family: Akzidenz;
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/akzidenz/AkzidenzGroteskPro-Regular.otf')
+      format('opentype');
+  }
+
+  html {
+    font-family: Akzidenz, system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .keyboard {
+    @apply max-w-2xl mt-5 mx-3 flex flex-wrap justify-center;
+  }
+
+  .hangman-img {
+    @apply w-32 h-32 sm:w-60 sm:h-60
+  }
+
+  .logo {
+    @apply font-bold text-2xl sm:text-4xl md:text-5xl;
+  }
+
+  .logo-small {
+    @apply text-2xl
+  }
+}
