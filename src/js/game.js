@@ -24,7 +24,7 @@ const checkLetter = letter => {
     }
 
     triesLeftSpan.innerText = triesLeft;
-    hangmanImage.src = `/images/hg-${10 - triesLeft}.png`;
+    hangmanImage.src = `./images/hg-${10 - triesLeft}.png`;
   } else {
     Array.from(wordWeAreGuessing).forEach((ch, i) => {
       if (ch === inputLetter) {
@@ -90,13 +90,13 @@ const stopGame = status => {
   document.getElementById('keyboard').remove();
 
   if (status === 'win') {
-    imageOfHangman.src = '/images/hg-win.png';
+    imageOfHangman.src = './images/hg-win.png';
     gameDiv.innerHTML +=
       '<h2 class="text-2xl font-bold text-lime-600 mt-4 " >You won!</h2>';
   }
 
   if (status === 'lose') {
-    imageOfHangman.src = '/images/hg-10.png';
+    imageOfHangman.src = './images/hg-10.png';
     gameDiv.innerHTML +=
       '<h2 class="text-2xl font-bold text-red-600 mt-4" >You lost :(</h2>';
   }
